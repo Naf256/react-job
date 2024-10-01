@@ -37,7 +37,10 @@ const JobForm = () => {
     // Submit the form data to the server
     fetch('http://localhost:3001/api/add-jobs', {
       method: 'POST',
-      body: form,
+      headers: {
+                'Content-Type': 'application/json',
+            },
+      body: JSON.stringify(formData),
     })
       .then((response) => {
         if (response.ok) {

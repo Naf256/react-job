@@ -5,7 +5,7 @@ const CompanyList = () => {
 
   useEffect(() => {
     // Fetch all companies from the API
-    fetch('http://localhost:3001/companys')
+    fetch('http://localhost:3001/api/companys')
       .then((response) => response.json())
       .then((data) => {
         if (data.message === 'success') {
