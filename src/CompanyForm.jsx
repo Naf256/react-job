@@ -6,7 +6,7 @@ const CompanyForm = () => {
     name: '',
     email: '',
     password: '',
-    total_post: '',
+    total_post: 0,
     tagline: '',
     description: '',
     contact_email: '',
@@ -41,7 +41,7 @@ const CompanyForm = () => {
     });
 
     // Submit the form data to the server
-    fetch('http://localhost:3001/companys', {
+    fetch('http://localhost:3001/api/companys', {
       method: 'POST',
       body: form,
     })
